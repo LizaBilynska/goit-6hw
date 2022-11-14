@@ -14,8 +14,7 @@ const images = [
 ];
 
 const imageCards = images
-  .map(image => '<li class="gallery__item"><image class="gallery__img" src="${image.url}" alt="${image.alt}></image></li>')
+  .map(image => `<li><img class="gallery-image" src="${image.url}" alt="${image.alt}"/></li>`)
   .join("");
 
-console.log(imageCards);
-galleryEl.insertAdjacentHTML("afterbegin", imageCards)
+document.getElementsByClassName("gallery")[0].insertAdjacentHTML("afterbegin", imageCards)

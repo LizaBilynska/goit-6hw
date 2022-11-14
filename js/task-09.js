@@ -3,7 +3,6 @@ function getRandomHexColor() {
 }
 document.getElementsByClassName("change-color")[0].onclick = () => {
 	const color = this.getRandomHexColor();
-	console.log(color);
 	document.getElementsByClassName("color")[0].innerHTML = color;
 	document.body.style.backgroundColor = color;
 };

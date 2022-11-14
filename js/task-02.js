@@ -1,20 +1,21 @@
-// const ingredients = [
-//   'Potatoes',
-//   'Mushrooms',
-//   'Garlic',
-//   'Tomatos',
-//   'Herbs',
-//   'Condiments',
-// ];
+const ingredients = [
+  'Potatoes',
+  'Mushrooms',
+  'Garlic',
+  'Tomatos',
+  'Herbs',
+  'Condiments',
+];
 
-const makeIngredientsList = options => {
-  return options.map(option => {
-    const liEl = document.createElement("li");
-    liEl.classList.add("item");
-    liEl.textContent = option;
+let elements = [];
+for (let i = 0; i < ingredients.length; i++) {
+	const element = document.createElement("li");
+	element.innerHTML = ingredients[i];
+	element.className = "item";
+	elements[i] = element;
+}
 
-    return liEl;
-  }
-
-  )
+const igredients = document.getElementById("ingredients");
+for (let i = 0; i < elements.length; i++) {
+	igredients.appendChild(elements[i]);
 }
