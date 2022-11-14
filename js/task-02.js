@@ -16,6 +16,4 @@ for (let i = 0; i < ingredients.length; i++) {
 }
 
 const igredients = document.getElementById("ingredients");
-for (let i = 0; i < elements.length; i++) {
-	igredients.appendChild(elements[i]);
-}
+igredients.append(...elements)
